@@ -139,24 +139,24 @@ export default function AdminProductEditScreen() {
         <div>
           <ul>
             <li>
-              <Link href="/admin/dashboard">Dashboard</Link>
+              <Link href="/admin/dashboard">Panel</Link>
             </li>
             <li>
-              <Link href="/admin/orders">Orders</Link>
+              <Link href="/admin/orders">Ordenes</Link>
             </li>
             <li>
               <Link href="/admin/products" className="font-bold">
-                Products
+                Productos
               </Link>
             </li>
             <li>
-              <Link href="/admin/users">Users</Link>
+              <Link href="/admin/users">Usuarios</Link>
             </li>
           </ul>
         </div>
         <div className="md:col-span-3">
           {loading ? (
-            <div>Loading...</div>
+            <div>Cargando...</div>
           ) : error ? (
             <div className="alert-error">{error}</div>
           ) : (
@@ -166,7 +166,7 @@ export default function AdminProductEditScreen() {
             >
               <h1 className="mb-4 text-xl">{`Edit Product ${productId}`}</h1>
               <div className="mb-4">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Nombre</label>
                 <input
                   type="text"
                   className="w-full"
@@ -195,7 +195,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="price">Price</label>
+                <label htmlFor="price">Precio</label>
                 <input
                   type="text"
                   className="w-full"
@@ -209,7 +209,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="image">image</label>
+                <label htmlFor="image">imagen</label>
                 <input
                   type="text"
                   className="w-full"
@@ -223,7 +223,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="imageFile">Upload image</label>
+                <label htmlFor="imageFile">Subir imagen</label>
                 <input
                   type="file"
                   className="w-full"
@@ -231,10 +231,10 @@ export default function AdminProductEditScreen() {
                   onChange={uploadHandler}
                 />
 
-                {loadingUpload && <div>Uploading....</div>}
+                {loadingUpload && <div>Subiendo....</div>}
               </div>
               <div className="mb-4">
-                <label htmlFor="category">category</label>
+                <label htmlFor="category">Categoria</label>
                 <input
                   type="text"
                   className="w-full"
@@ -248,7 +248,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="brand">brand</label>
+                <label htmlFor="brand">Marca</label>
                 <input
                   type="text"
                   className="w-full"
@@ -262,7 +262,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="countInStock">countInStock</label>
+                <label htmlFor="countInStock">En stock</label>
                 <input
                   type="text"
                   className="w-full"
@@ -278,7 +278,7 @@ export default function AdminProductEditScreen() {
                 )}
               </div>
               <div className="mb-4">
-                <label htmlFor="countInStock">description</label>
+                <label htmlFor="countInStock">Descripcion</label>
                 <input
                   type="text"
                   className="w-full"
@@ -299,7 +299,7 @@ export default function AdminProductEditScreen() {
                 </button>
               </div>
               <div className="mb-4">
-                <Link href={`/admin/products`}>Back</Link>
+                <Link href={`/admin/products`}>volver</Link>
               </div>
             </form>
           )}

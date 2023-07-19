@@ -43,26 +43,26 @@ export default function AdminOrderScreen() {
         <div>
           <ul>
             <li>
-              <Link href="/admin/dashboard">Dashboard</Link>
+              <Link href="/admin/dashboard">Panel</Link>
             </li>
             <li>
               <Link href="/admin/orders" className="font-bold">
-                Orders
+                Ordenes
               </Link>
             </li>
             <li>
-              <Link href="/admin/products">Products</Link>
+              <Link href="/admin/products">Productos</Link>
             </li>
             <li>
-              <Link href="/admin/users">Users</Link>
+              <Link href="/admin/users">Usuarios</Link>
             </li>
           </ul>
         </div>
         <div className="overflow-x-auto md:col-span-3">
-          <h1 className="mb-4 text-xl">Admin Orders</h1>
+          <h1 className="mb-4 text-xl">Ordenes de administrador</h1>
 
           {loading ? (
-            <div>Loading...</div>
+            <div>Cargando...</div>
           ) : error ? (
             <div className="alert-error">{error}</div>
           ) : (
@@ -71,12 +71,12 @@ export default function AdminOrderScreen() {
                 <thead className="border-b">
                   <tr>
                     <th className="px-5 text-left">ID</th>
-                    <th className="p-5 text-left">USER</th>
-                    <th className="p-5 text-left">DATE</th>
+                    <th className="p-5 text-left">USUARIO</th>
+                    <th className="p-5 text-left">FECHA</th>
                     <th className="p-5 text-left">TOTAL</th>
-                    <th className="p-5 text-left">PAID</th>
-                    <th className="p-5 text-left">DELIVERED</th>
-                    <th className="p-5 text-left">ACTION</th>
+                    <th className="p-5 text-left">PAGO</th>
+                    <th className="p-5 text-left">ENVIO</th>
+                    <th className="p-5 text-left">ACCION</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -102,7 +102,7 @@ export default function AdminOrderScreen() {
                       </td>
                       <td className="p-5">
                         <Link href={`/order/${order._id}`} passHref>
-                          Details
+                          Detalles
                         </Link>
                       </td>
                     </tr>

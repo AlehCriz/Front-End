@@ -77,13 +77,8 @@ export default function ShippingScreen() {
             className="w-full"
             id="address"
             {...register('address', {
-              required: 'Porfavor ingrese dirección',
-              minLength: { value: 3, message: 'Dirección debe tener más de dos caracteres' },
             })}
           />
-          {errors.address && (
-            <div className="text-red-500">{errors.address.message}</div>
-          )}
         </div>
         <div className="mb-4">
           <label htmlFor="city">Ciudad</label>

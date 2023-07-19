@@ -98,25 +98,25 @@ export default function AdminProdcutsScreen() {
         <div>
           <ul>
             <li>
-              <Link href="/admin/dashboard">Dashboard</Link>
+              <Link href="/admin/dashboard">Panel</Link>
             </li>
             <li>
-              <Link href="/admin/orders">Orders</Link>
+              <Link href="/admin/orders">Ordenes</Link>
             </li>
             <li>
               <Link href="/admin/products" className="font-bold">
-                Products
+                Productos
               </Link>
             </li>
             <li>
-              <Link href="/admin/users">Users</Link>
+              <Link href="/admin/users">Usuarios</Link>
             </li>
           </ul>
         </div>
         <div className="overflow-x-auto md:col-span-3">
           <div className="flex justify-between">
-            <h1 className="mb-4 text-xl">Products</h1>
-            {loadingDelete && <div>Deleting item...</div>}
+            <h1 className="mb-4 text-xl">Productos</h1>
+            {loadingDelete && <div>Borrando elemento...</div>}
             <button
               disabled={loadingCreate}
               onClick={createHandler}
@@ -126,7 +126,7 @@ export default function AdminProdcutsScreen() {
             </button>
           </div>
           {loading ? (
-            <div>Loading...</div>
+            <div>Cargando...</div>
           ) : error ? (
             <div className="alert-error">{error}</div>
           ) : (
@@ -135,12 +135,12 @@ export default function AdminProdcutsScreen() {
                 <thead className="border-b">
                   <tr>
                     <th className="px-5 text-left">ID</th>
-                    <th className="p-5 text-left">NAME</th>
-                    <th className="p-5 text-left">PRICE</th>
-                    <th className="p-5 text-left">CATEGORY</th>
-                    <th className="p-5 text-left">COUNT</th>
-                    <th className="p-5 text-left">RATING</th>
-                    <th className="p-5 text-left">ACTIONS</th>
+                    <th className="p-5 text-left">NOMBRE</th>
+                    <th className="p-5 text-left">PRECIO</th>
+                    <th className="p-5 text-left">CATEGORIA</th>
+                    <th className="p-5 text-left">CANTIDAD</th>
+                    <th className="p-5 text-left">VALORACION</th>
+                    <th className="p-5 text-left">ACCIONES</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -158,7 +158,7 @@ export default function AdminProdcutsScreen() {
                           type="button"
                           className="default-button"
                         >
-                          Edit
+                          Editar
                         </Link>
                         &nbsp;
                         <button
@@ -166,7 +166,7 @@ export default function AdminProdcutsScreen() {
                           className="default-button"
                           type="button"
                         >
-                          Delete
+                          Eliminar
                         </button>
                       </td>
                     </tr>

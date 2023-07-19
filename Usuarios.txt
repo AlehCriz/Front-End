@@ -1,0 +1,7 @@
+Admin: Cristian@example.com
+Contraseña: 123456
+
+Usuario: Eduardo@example.com
+Contraseña: 123456
+
+---No ingresar tarjeta de verdad, porque nose lo que causaria-----
